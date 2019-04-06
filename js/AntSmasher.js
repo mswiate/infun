@@ -21,33 +21,28 @@ function setup() {
     upper = height / 50;
 
     if (age < 5) {
-        lower *= 0.4;
-        upper *= 0.4;
+        lower *= 0.5;
+        upper *= 0.5;
     }
     else if (age < 11) {
-
-        lower *= 0.6;
-        upper *= 0.6;
-    }
-    else if (age < 16) {
-
         lower *= 0.75;
         upper *= 0.75;
     }
-    else if (age < 35) {
-
+    else if (age < 16) {
         lower *= 1;
         upper *= 1;
     }
+    else if (age < 35) {
+        lower *= 1.3;
+        upper *= 1.3;
+    }
     else if (age < 65) {
-
-        lower *= 0.75;
-        upper *= 0.75;
+        lower *= 1;
+        upper *= 1;
     }
     else {
-
-        lower *= 0.6;
-        upper *= 0.6;
+        lower *= 0.75;
+        upper *= 0.75;
     }
 
     speed = height / 200;
