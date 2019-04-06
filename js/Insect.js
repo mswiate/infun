@@ -15,11 +15,18 @@ function Insect(x, type) {
  * draws the insect based upon type
  */
 Insect.prototype.draw = function () {
-    stroke(0);
-    strokeWeight(3);
-    fill(this.type ? "#00FFFF" : "#FF4444");
-    ellipse(this.position.x, this.position.y, this.radius);
-};
+    if (debug) {
+        stroke(0);
+        strokeWeight(3);
+        fill(this.type ? "#00FFFF" : "#FF4444");
+        ellipse(this.position.x, this.position.y, this.radius);
+    } else {
+        image(this.type ? waspImg : antImg,
+            this.position.x - this.radius, this.position.y - this.radius,
+            this.radius * 2, this.radius * 2);
+    }
+}
+;
 
 /**
  * forces bugs along their path

@@ -6,13 +6,23 @@ var playing; // aids with asychronous endGame() function
 
 var speed; // speed at which the bugs travel
 var bugChance; // chance of a new bug being pushed
-var age = 3;
+var age = 20;
 var upper;
 var lower;
 var start = false;
+var antImg;
+var waspImg;
+debug = true
+
+function preload() {
+    if (!debug) {
+        antImg = loadImage('assets/ant.png');
+        waspImg = loadImage('assets/wasp.png');
+    }
+}
 
 function setup() {
-    createCanvas(windowWidth * 0.95, windowHeight * 0.85);
+    createCanvas(windowWidth * 0.95, windowHeight * 0.8);
     score = 0;
     totalClicks = 0;
     playing = true;
