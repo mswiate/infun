@@ -12,7 +12,7 @@ var lower;
 var start = false;
 var antImg;
 var waspImg;
-debug = true
+debug = false;
 
 function preload() {
     if (!debug) {
@@ -22,7 +22,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth * 0.95, windowHeight * 0.8);
+    createCanvas(windowWidth * 0.95, windowHeight * 0.75);
     score = 0;
     totalClicks = 0;
     playing = true;
