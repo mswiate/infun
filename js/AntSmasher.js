@@ -6,13 +6,16 @@ var playing; // aids with asychronous endGame() function
 
 var speed; // speed at which the bugs travel
 var bugChance; // chance of a new bug being pushed
-var age = 20;
+
 var upper;
 var lower;
 var start = false;
 var antImg;
 var waspImg;
+
+//options
 debug = false;
+var age = 1;
 
 function preload() {
     if (!debug) {
